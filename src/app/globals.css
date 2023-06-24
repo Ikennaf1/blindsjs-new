@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsl(228, 0%, 30%);
+}
+
+.link {
+  color: #2ec4b6;
+}
+
+.body-margin {
+  @apply  xl:mx-64 lg:mx-32 md:mx-16 sm:mx-8 mx-4;
+}
+
+.nav {
+  color: hsl(228, 20%, 85%);
+  background-color: hsl(228, 20%, 10%);
+  @apply shadow-lg p-4 fixed w-full z-10;
+}
+
+.header {
+  background-image: url('https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/header.jpg');
+  @apply w-full h-[670px] sm:h-[756px] bg-cover bg-center bg-no-repeat shadow-lg;
+}
+
+.cta h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gray-800 font-black lg:font-bold drop-shadow-lg;
+}
+
+.cta p {
+  @apply text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500 drop-shadow-sm;
+}
+
+.section-one-items {
+  min-width: 0px;
+  flex: 1;
+  text-align: center;
+  @apply bg-white p-8 shadow-md border-none rounded-md mt-8 sm:mt-0;
+}
+
+.section-two-items {
+  min-width: 0px;
+  flex: 1;
+  @apply mt-8 sm:mt-0;
+}
+
+.section-three-items {
+  min-width: 0px;
+  flex: 1;
+  @apply mt-8 sm:mt-0 p-8 rounded-md shadow-md;
+}
+
+.nav-collapsed {
+  opacity: 0;
+  transform: translateX(-150%);
+  @apply transition duration-500 ease-in-out;
+}
+
+.nav-show {
+  opacity: 1;
+  transform: translateX(0%);
+  @apply transition duration-500 ease-in-out;
+}
+
+.topic-list-main {
+  @apply fixed border-r bg-transparent hidden md:block md:w-28 lg:w-36 pr-3;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.topic-list-items-main {
+  @apply text-sm mt-1 ease-linear duration-75 inline-block;
+}
+
+.topic-list-main li{
+  @apply mt-3;
+}
+
+.topic-list-items-main:hover {
+  @apply link;
+}
+
+#topic_list_main a.active {
+  @apply font-bold pl-2;
+  border-left: 3px solid #2ec4b6;
+}
+
+.topic-list-items-collapsible {
+  @apply text-sm mt-1 py-3 ease-linear duration-75 block;
+}
+
+#topic_list_collapsible li {
+  @apply mt-1;
+}
+
+#topic_list_collapsible a:active {
+  background-color: rgba(0, 0, 0, 0.15);
+  @apply font-bold pl-2 link rounded;
+}
+
+.footer {
+  background-color: hsl(228, 20%, 96%);
+}
