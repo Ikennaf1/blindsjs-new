@@ -88,6 +88,22 @@ body {
   @apply transition duration-500 ease-in-out;
 }
 
+.article-left-margin {
+  flex: 1;
+}
+
+.article {
+  flex: 3;
+}
+
+.article h3 {
+  @apply mt-5 mb-3 text-xl font-bold;
+}
+
+.article-right-margin {
+  flex: 1;
+}
+
 .topic-list-main {
   @apply fixed border-r bg-transparent hidden md:block md:w-28 lg:w-36 pr-3;
   height: 60vh;
