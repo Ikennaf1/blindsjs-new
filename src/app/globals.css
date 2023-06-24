@@ -41,7 +41,7 @@ body {
 .nav {
   color: hsl(228, 20%, 85%);
   background-color: hsl(228, 20%, 10%);
-  @apply shadow-lg p-4 fixed w-full z-10;
+  @apply shadow-lg py-4 fixed w-full z-10;
 }
 
 .header {

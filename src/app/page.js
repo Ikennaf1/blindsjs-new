@@ -21,10 +21,10 @@ const Home = () => {
       <NavCollapsible>
         <div className="mt-5 h-1/2 overflow-y-auto">
           <ul id="topic_list_collapsible">
-            <Link href='/docs' className="topic-list-items-collapsible"><li>Documentation</li></Link>
-            <Link href='/docs' className="topic-list-items-collapsible"><li>About</li></Link>
-            <Link href='/docs' className="topic-list-items-collapsible"><li>Blog</li></Link>
-            <Link href='/docs' className="topic-list-items-collapsible"><li>Products</li></Link>
+            <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
+            <Link href='/documentation' className="topic-list-items-collapsible"><li>About</li></Link>
+            <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
+            <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
           </ul>
         </div>
       </NavCollapsible>
@@ -44,12 +44,12 @@ const Home = () => {
           {/* <div className="">dhf</div> */}
           <div className="">
             <ul className="hidden md:flex gap-4">
-              <li>Documentation</li>
-              <li>About</li>
-              <li>Blog</li>
-              <li>Products</li>
+              <Link href="/documentation"><li>Documentation</li></Link>
+              <Link href="/"><li>About</li></Link>
+              <Link href="/"><li>Blog</li></Link>
+              <Link href="/"><li>Products</li></Link>
             </ul>
-            <label for="collapsedNav" className="md:hidden">
+            <label htmlFor="collapsedNav" className="md:hidden">
               <Image
                src={toggleIcon}
                width=""
