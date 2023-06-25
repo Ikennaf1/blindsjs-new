@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
@@ -16,12 +16,16 @@ const TopicContainer = ({ topics }) => {
      */
     const VersionList = ({ defaultVersion }) => {
 
-        const [url, setUrl] = useState(window.location.href);
+        const [url, setUrl] = useState('');
     
         const handleVersionSelect = (e) => {
             setUrl(url.replace(/v[0-9]/, e.target.value));
             window.location.href = url;
         }
+
+        useEffect(() => {
+            setUrl(window.location.href);
+        }, []);
     
         return (
             <select className="w-full rounded p-2 bg-transparent border" defaultValue={ defaultVersion } onChange={(e) => handleVersionSelect(e)}>

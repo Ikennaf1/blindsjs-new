@@ -1,5 +1,3 @@
-import TopicContainer from '../../TopicContainer';
-import topics from '../topics.json';
 import Installation from './Installation';
 
 const V0Installation = () => {

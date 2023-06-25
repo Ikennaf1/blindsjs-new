@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from "next/navigation";
@@ -20,12 +20,16 @@ const DocLayout = ({ children }) => {
      */
     const VersionList = ({ defaultVersion }) => {
 
-        const [url, setUrl] = useState(window.location.href);
+        const [url, setUrl] = useState('');
     
         const handleVersionSelect = (e) => {
             setUrl(url.replace(/v[0-9]/, e.target.value));
             window.location.href = url;
         }
+
+        useEffect(() => {
+            setUrl(window.location.href);
+        }, []);
     
         return (
             <select className="w-full rounded p-2 bg-transparent border" defaultValue={ defaultVersion } onChange={(e) => handleVersionSelect(e)}>
@@ -95,11 +99,11 @@ const DocLayout = ({ children }) => {
                     </ul>
                     <label htmlFor="collapsedNav" className="md:hidden">
                     <Image
-                    src={toggleIcon}
-                    width=""
-                    height=""
-                    alt="toggle menu icon"
-                    className="drop-shadow-md cursor-pointer"
+                     src={toggleIcon}
+                     width=""
+                     height=""
+                     alt="toggle menu icon"
+                     className="drop-shadow-md cursor-pointer"
                     />
                     </label>
                 </div>
