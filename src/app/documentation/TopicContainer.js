@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
 const TopicContainer = ({ topics }) => {
+    "use client";
 
     const pathname = usePathname();
-    // "use client";
 
     /**
      * Display the available versions with a functionality to

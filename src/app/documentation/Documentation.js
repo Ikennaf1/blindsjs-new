@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Documentation = ({ children, title, next, prev }) => {
     return (
         <div>
-            <h2 className="text-black font-bold text-3xl mb-3">{ title }</h2>
+            <h2 className="text-black font-bold text-3xl mb-3 border-b border-gray-300 pb-4">{ title }</h2>
             { children }
             <div className="flex justify-between w-full">
                 {prev && <Link href={prev} className="mr-auto mt-5">

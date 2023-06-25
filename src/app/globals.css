@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css?family=Belanosima|Oxygen");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Belanosima|Oxygen");
 
 * {
   scroll-behavior: smooth;
 }
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Belanosima', 'Segoe UI', 'Oxygen',
+  font-family: 'Roboto',  'Belanosima','Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }

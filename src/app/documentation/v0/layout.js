@@ -57,9 +57,19 @@ const DocLayout = ({ children }) => {
             </nav>
 
             <div className="pt-32">
-                <section className="">
-                    { children }
-                </section>
+                <div className="flex flex-row justify-between gap-4 body-margin">
+                    <section className="article-left-margin hidden md:block">
+                        <TopicContainer topics={topics} />
+                    </section>            
+
+                    <section className="flex flex-col gap-32 bg-white shadow-lg article p-8">
+                        { children }
+                    </section>
+
+                    <section className="bg-blue-500">
+                        &nbsp;
+                    </section>
+                </div>
             </div>
         </main>
     );
