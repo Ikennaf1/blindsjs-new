@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import NavCollapsible from '../../NavCollapsible';
+import topics from './topics.json';
 
 import logoDark from '/public/logo-no-bg-dark.svg';
 import toggleIcon from '/public/bars-3-bottom-right.svg';
+import TopicContainer from '../TopicContainer';
 
 const DocLayout = ({ children }) => {
     return (
@@ -17,9 +19,10 @@ const DocLayout = ({ children }) => {
                     <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
                 </ul>
                 </div>
+                <TopicContainer topics={topics} />
             </NavCollapsible>
 
-            <nav className="nav">
+            <nav className="nav text-sm">
                 <div className="body-margin flex flex-row justify-between items-center">
                 <div className="flex min-w-0 gap-4 items-center">
                     <Link href="/">

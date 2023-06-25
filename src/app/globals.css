@@ -2,28 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css?family=Belanosima|Oxygen");
+
 * {
   scroll-behavior: smooth;
 }
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Belanosima', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   background-color: #f8f9fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -123,9 +115,14 @@ body {
   @apply link;
 }
 
-#topic_list_main a.active {
-  @apply font-bold pl-2;
+#topic_list_main li a:active {
   border-left: 3px solid #2ec4b6;
+  @apply font-bold pl-2;
+}
+
+.active-topic {
+  border-left: 3px solid #2ec4b6;
+  @apply font-bold pl-2;
 }
 
 .topic-list-items-collapsible {

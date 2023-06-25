@@ -1,9 +1,6 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.css';
 // import Head from 'next/head';
 import Footer from './Footer';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Blinds',
@@ -33,7 +30,7 @@ export default function RootLayout({ children }) {
         
         <link rel="manifest" href="/site.webmanifest.json" />
       </head>
-      <body className={inter.className}>
+      <body className="">
         {children}
         <Footer />
       </body>

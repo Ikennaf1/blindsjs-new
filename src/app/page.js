@@ -28,7 +28,7 @@ const Home = () => {
           </ul>
         </div>
       </NavCollapsible>
-      <nav className="nav">
+      <nav className="nav text-sm">
         <div className="body-margin flex flex-row justify-between items-center">
           <div className="flex min-w-0 gap-4 items-center">
             <Link href="/">

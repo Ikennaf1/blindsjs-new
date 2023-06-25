@@ -2,8 +2,12 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from "next/navigation";
 
 const TopicContainer = ({ topics }) => {
+
+    const pathname = usePathname();
+    // "use client";
 
     /**
      * Display the available versions with a functionality to
@@ -40,7 +44,7 @@ const TopicContainer = ({ topics }) => {
                 {
                     allTopics.map((topic, i) => 
                         <li key={i}>
-                            <Link href={`${topic[1]}`} className="topic-list-items-main">{topic[0]}</Link>
+                            <Link href={`${topic[1]}`} className={`topic-list-items-main ${pathname.endsWith((topic[1]).substr(1)) ? "active-topic" : ""}`}>{topic[0]}</Link>
                         </li>
                     )
                 }
