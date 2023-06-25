@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from "next/navigation";
 import NavCollapsible from '../../NavCollapsible';
 import topics from './topics.json';
 
@@ -8,18 +12,64 @@ import toggleIcon from '/public/bars-3-bottom-right.svg';
 import TopicContainer from '../TopicContainer';
 
 const DocLayout = ({ children }) => {
+
+    /**
+     * Display the available versions with a functionality to
+     * redirect to any selected one
+     * @param {defaultVersion} param0 string
+     */
+    const VersionList = ({ defaultVersion }) => {
+
+        const [url, setUrl] = useState(window.location.href);
+    
+        const handleVersionSelect = (e) => {
+            setUrl(url.replace(/v[0-9]/, e.target.value));
+            window.location.href = url;
+        }
+    
+        return (
+            <select className="w-full rounded p-2 bg-transparent border" defaultValue={ defaultVersion } onChange={(e) => handleVersionSelect(e)}>
+                <option value="v0">v0</option>
+            </select>
+        );
+    }
+
+    const topicListCollapsible = () => {
+        const pathname = usePathname();
+        const [allTopics] = useState(Object.entries(topics));
+
+        return (
+            <div className="">
+                <div className="sticky top-0">
+                    <VersionList defaultVersion="v0" />
+                </div>
+                <ul id="topic_list_collapsible">
+                {
+                    allTopics.map((topic, i) => 
+                        <li key={i}>
+                            <Link href={`${topic[1]}`} className={`topic-list-items-collapsible ${pathname.endsWith((topic[1]).substr(1)) ? "active-topic" : ""}`}>{topic[0]}</Link>
+                        </li>
+                    )
+                }
+                </ul>
+            </div>
+        );
+    }
+    
     return (
         <main>
             <NavCollapsible>
-                <div className="mt-5 h-1/2 overflow-y-auto">
-                <ul id="topic_list_collapsible">
-                    <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
-                    <Link href='/documentation' className="topic-list-items-collapsible"><li>About</li></Link>
-                    <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
-                    <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
-                </ul>
+                <div className="mt-4 h-1/2 overflow-y-auto flex flex-col gap-8">
+                    <ul id="topic_list_collapsible border-b border-gray-300">
+                        <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
+                        <Link href='/documentation' className="topic-list-items-collapsible"><li>About</li></Link>
+                        <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
+                        <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
+                    </ul>
+                    <div className="">
+                        { topicListCollapsible() }
+                    </div>
                 </div>
-                <TopicContainer topics={topics} />
             </NavCollapsible>
 
             <nav className="nav text-sm">
@@ -38,10 +88,10 @@ const DocLayout = ({ children }) => {
                 {/* <div id="blinds_id" className="">dhf</div> */}
                 <div className="">
                     <ul className="hidden md:flex gap-4">
-                    <Link href="/documentation"><li>Documentation</li></Link>
-                    <Link href="/"><li>About</li></Link>
-                    <Link href="/"><li>Blog</li></Link>
-                    <Link href="/"><li>Products</li></Link>
+                        <Link href="/documentation"><li>Documentation</li></Link>
+                        <Link href="/"><li>About</li></Link>
+                        <Link href="/"><li>Blog</li></Link>
+                        <Link href="/"><li>Products</li></Link>
                     </ul>
                     <label htmlFor="collapsedNav" className="md:hidden">
                     <Image
@@ -56,8 +106,8 @@ const DocLayout = ({ children }) => {
                 </div>
             </nav>
 
-            <div className="pt-32">
-                <div className="flex flex-row justify-between gap-4 body-margin">
+            <div className="sm:pt-32 pt-24">
+                <div className="sm:flex sm:flex-row sm:justify-between sm:gap-4 body-margin">
                     <section className="article-left-margin hidden md:block">
                         <TopicContainer topics={topics} />
                     </section>            
@@ -66,8 +116,8 @@ const DocLayout = ({ children }) => {
                         { children }
                     </section>
 
-                    <section className="bg-blue-500">
-                        &nbsp;
+                    <section className="bg-blue-500 hidden sm:block">
+                        
                     </section>
                 </div>
             </div>

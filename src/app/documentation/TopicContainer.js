@@ -39,7 +39,9 @@ const TopicContainer = ({ topics }) => {
 
         return (
             <div className="topic-list-main">
-                <VersionList defaultVersion="v0" />
+                <div className="sticky top-0">
+                    <VersionList defaultVersion="v0" />
+                </div>
                 <ul id="topic_list_main">
                 {
                     allTopics.map((topic, i) => 

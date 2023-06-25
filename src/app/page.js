@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <main className="flex flex-col gap-32 justify-start">
       <NavCollapsible>
-        <div className="mt-5 h-1/2 overflow-y-auto">
+        <div className="mt-4 h-1/2 overflow-y-auto">
           <ul id="topic_list_collapsible">
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>About</li></Link>
