@@ -1,3 +1,8 @@
+"use client";
+
+import { blindsInit, blindsToggle, setBlindsStyles } from 'blinds';
+import { useEffect } from 'react';
+import DarkModeStyle from './DarkModeStyle.json';
 import './globals.css';
 // import Head from 'next/head';
 import Footer from './Footer';
@@ -8,6 +13,21 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  useEffect(() => {
+    setBlindsStyles(DarkModeStyle);
+
+    blindsInit();
+
+    document.querySelector('#blinds_id').onclick = () => {
+      blindsToggle();
+    }
+
+    return ( () => {
+      blindsInit();      
+    });
+  }, []);
+
   return (
     <html lang="en">
       <head>

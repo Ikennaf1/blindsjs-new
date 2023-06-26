@@ -53,7 +53,7 @@ body {
   min-width: 0px;
   flex: 1;
   text-align: center;
-  @apply bg-white p-8 shadow-md border-none rounded-md mt-8 sm:mt-0;
+  @apply bg-white p-8 shadow-lg border-none rounded-md mt-8 sm:mt-0;
 }
 
 .section-two-items {
@@ -65,7 +65,7 @@ body {
 .section-three-items {
   min-width: 0px;
   flex: 1;
-  @apply mt-8 sm:mt-0 p-8 rounded-md shadow-md;
+  @apply mt-8 sm:mt-0 p-8 rounded-md shadow-lg;
 }
 
 .nav-collapsed {

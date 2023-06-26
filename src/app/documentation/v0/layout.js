@@ -89,7 +89,7 @@ const DocLayout = ({ children }) => {
                     </Link>
                     <Link href="/"><h1 className="font-bold text-xl">Blinds</h1></Link>
                 </div>
-                {/* <div id="blinds_id" className="">dhf</div> */}
+                <div id="blinds_id" className=""></div>
                 <div className="">
                     <ul className="hidden md:flex gap-4">
                         <Link href="/documentation"><li>Documentation</li></Link>
