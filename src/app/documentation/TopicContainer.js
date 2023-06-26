@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
 const TopicContainer = ({ topics }) => {
-    "use client";
 
     const pathname = usePathname();
 

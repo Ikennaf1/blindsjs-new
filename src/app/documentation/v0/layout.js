@@ -116,7 +116,7 @@ const DocLayout = ({ children }) => {
                         <TopicContainer topics={topics} />
                     </section>            
 
-                    <section className="flex flex-col gap-32 bg-white shadow-lg article p-8">
+                    <section className="flex flex-col gap-32 bg-white rounded-lg shadow-lg article p-8">
                         { children }
                     </section>
 

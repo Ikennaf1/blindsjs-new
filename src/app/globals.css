@@ -141,3 +141,54 @@ body {
 .footer {
   background-color: hsl(228, 20%, 96%);
 }
+
+.load-container {
+  @apply flex w-full h-[80vh] items-center justify-center overflow-hidden bg-none;
+ }
+
+ .load-pack {
+   @apply flex justify-center items-center h-32;
+ }
+ 
+ .ball {
+  display: inline-block;
+  width: calc(16px + 2vmin);
+  height: calc(16px + 2vmin);
+  margin: calc(1px + 1vmin);
+  border-radius: 50%;
+  @apply shadow-md;
+ }
+ 
+ .ball-1 {
+   background-color: rgb(221, 16, 50);
+ }
+ .ball-2 {
+   background-color: #2ec4b6;
+   animation-delay: 0.2s;
+ }
+ .ball-3 {
+  background-color: hsl(268, 46%, 33%);
+  animation-delay: 0.4s;
+}
+
+ .bounce {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: ball-bounce;
+  animation-timing-function: ease;
+ }
+ 
+ @keyframes ball-bounce{
+  0%{
+      transform: translateY(0%)
+  }
+  35% {
+    transform: translateY(-100%);
+  }
+  75%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+ }
