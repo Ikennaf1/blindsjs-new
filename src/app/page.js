@@ -22,7 +22,7 @@ const Home = () => {
         <div className="mt-4 h-1/2 overflow-y-auto">
           <ul id="topic_list_collapsible">
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
-            <Link href='/documentation' className="topic-list-items-collapsible"><li>About</li></Link>
+            <Link href='/about' className="topic-list-items-collapsible"><li>About</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
           </ul>
@@ -39,7 +39,7 @@ const Home = () => {
                alt="Blinds logo"
               />
             </Link>
-            <Link href="/"><h1 className="font-bold text-xl">Blinds</h1></Link>
+            <a href="/"><h1 className="font-bold text-xl">Blinds</h1></a>
           </div>
           <div id="blinds_id" className=""></div>
           <div className="">

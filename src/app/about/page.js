@@ -19,10 +19,11 @@ const About = () => {
   return (
     <main className="flex flex-col gap-32 justify-start">
       <NavCollapsible>
+        <div className="flex flex-col space-between">
         <div className="mt-4 h-1/2 overflow-y-auto">
           <ul id="topic_list_collapsible">
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
-            <Link href='/documentation' className="topic-list-items-collapsible"><li>About</li></Link>
+            <Link href='/about' className="topic-list-items-collapsible"><li>About</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
           </ul>
@@ -49,7 +50,7 @@ const About = () => {
            alt="facebook"
            className="drop-shadow-md cursor-pointer"
           />
-          <Image
+          {/* <Image
            src="wordpress.svg"
            width="24"
            height="24"
@@ -69,8 +70,9 @@ const About = () => {
            height="24"
            alt="react"
            className="drop-shadow-md cursor-pointer"
-          />
-        </div>        
+          /> */}
+        </div>
+        </div>
       </NavCollapsible>
 
       <nav className="nav text-sm">
@@ -84,7 +86,7 @@ const About = () => {
                alt="Blinds logo"
               />
             </Link>
-            <Link href="/"><h1 className="font-bold text-xl">Blinds</h1></Link>
+            <a href="/"><h1 className="font-bold text-xl">Blinds</h1></a>
           </div>
           <div id="blinds_id" className=""></div>
           <div className="">
@@ -117,7 +119,17 @@ const About = () => {
         </div>
       </nav>
 
-      {/*  */}
+      {/* Header */}
+      <header className="about-jumbo">
+        <div className="pt-32 pb-24 body-margin text-center">
+          <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-light lg:font-light drop-shadow-lg uppercase border-b border-white inline-block px-8 py-4">Blinds</h2>
+          <p className="mt-4 text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-gray-100 drop-shadow-lg">Helping businesses establish their online businesses.</p>
+        </div>
+      </header>
+
+      <section>
+        <div></div>
+      </section>
     </main>
   );
 }
