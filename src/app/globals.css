@@ -36,6 +36,14 @@ body {
   @apply shadow-lg py-4 fixed w-full z-10;
 }
 
+.nav-link {
+  @apply ease-linear duration-75;
+}
+
+.nav-link:hover {
+  @apply link;
+}
+
 .header {
   background-image: url('https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/header.jpg');
   @apply w-full h-[670px] sm:h-[756px] bg-cover bg-center bg-no-repeat shadow-lg;

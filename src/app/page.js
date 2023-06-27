@@ -44,10 +44,10 @@ const Home = () => {
           <div id="blinds_id" className=""></div>
           <div className="">
             <ul className="hidden md:flex gap-4">
-              <Link href="/documentation"><li>Documentation</li></Link>
-              <Link href="/"><li>About</li></Link>
-              <Link href="/"><li>Blog</li></Link>
-              <Link href="/"><li>Products</li></Link>
+              <Link href="/documentation" className="nav-link"><li>Documentation</li></Link>
+              <Link href="/" className="nav-link"><li>About</li></Link>
+              <Link href="/" className="nav-link"><li>Blog</li></Link>
+              <Link href="/" className="nav-link"><li>Products</li></Link>
             </ul>
             <label htmlFor="collapsedNav" className="md:hidden">
               <Image
