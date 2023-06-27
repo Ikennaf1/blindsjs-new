@@ -10,6 +10,11 @@ import Footer from './Footer';
 export const metadata = {
   title: 'Blinds',
   description: 'The best dark mode package for all websites',
+  openGraph: {
+    title: 'Blinds',
+    description: 'The best dark mode package for all websites',
+    image: 'https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/og-blinds.jpg'
+  }
 }
 
 export default function RootLayout({ children }) {
@@ -24,22 +29,16 @@ export default function RootLayout({ children }) {
     }
 
     return ( () => {
-      blindsInit();      
+      blindsInit();
     });
-  }, []);
+  });
 
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="keywords" content="dark mode night mode" />
-        <meta property="og:title" content="Blinds Dark Mode Package" />
-        <meta property="og:url" content="https://blindsjs.dev" />
-        <meta property="og:description" content="The best dark mode package for your website" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/og-blinds.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
