@@ -22,7 +22,7 @@ const Home = () => {
         <div className="mt-4 h-1/2 overflow-y-auto">
           <ul id="topic_list_collapsible">
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
-            <Link href='/about' className="topic-list-items-collapsible"><li>About</li></Link>
+            <Link href='/about-us' className="topic-list-items-collapsible"><li>About us</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
           </ul>
@@ -45,7 +45,7 @@ const Home = () => {
           <div className="">
             <ul className="hidden md:flex gap-4">
               <Link href="/documentation" className="nav-link"><li>Documentation</li></Link>
-              <Link href="/about" className="nav-link"><li>About</li></Link>
+              <Link href="/about-us" className="nav-link"><li>About us</li></Link>
               <Link href="/" className="nav-link"><li>Blog</li></Link>
               <Link href="/" className="nav-link"><li>Products</li></Link>
             </ul>

@@ -66,7 +66,7 @@ const DocLayout = ({ children }) => {
                 <div className="mt-4 h-1/2 overflow-y-auto flex flex-col gap-8">
                     <ul id="topic_list_collapsible border-b border-gray-300">
                         <Link href='/documentation' className="topic-list-items-collapsible"><li>Documentation</li></Link>
-                        <Link href='/about' className="topic-list-items-collapsible"><li>About</li></Link>
+                        <Link href='/about-us' className="topic-list-items-collapsible"><li>About us</li></Link>
                         <Link href='/documentation' className="topic-list-items-collapsible"><li>Blog</li></Link>
                         <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
                     </ul>
@@ -93,7 +93,7 @@ const DocLayout = ({ children }) => {
                 <div className="">
                     <ul className="hidden md:flex gap-4">
                         <Link href="/documentation"><li>Documentation</li></Link>
-                        <Link href="/about"><li>About</li></Link>
+                        <Link href="/about-us"><li>About us</li></Link>
                         <Link href="/"><li>Blog</li></Link>
                         <Link href="/"><li>Products</li></Link>
                     </ul>
