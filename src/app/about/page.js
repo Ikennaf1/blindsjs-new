@@ -27,7 +27,52 @@ const About = () => {
             <Link href='/documentation' className="topic-list-items-collapsible"><li>Products</li></Link>
           </ul>
         </div>
+        <div className="flex flex-row flex-wrap gap-8">
+          <Image
+           src="whatsapp.svg"
+           width="24"
+           height="24"
+           alt="Whatsapp"
+           className="drop-shadow-md cursor-pointer"
+          />
+          <Image
+           src="twitter.svg"
+           width="24"
+           height="24"
+           alt="Twitter"
+           className="drop-shadow-md cursor-pointer"
+          />
+          <Image
+           src="facebook.svg"
+           width="24"
+           height="24"
+           alt="facebook"
+           className="drop-shadow-md cursor-pointer"
+          />
+          <Image
+           src="wordpress.svg"
+           width="24"
+           height="24"
+           alt="wordpress"
+           className="drop-shadow-md cursor-pointer"
+          />
+          <Image
+           src="youtube.svg"
+           width="24"
+           height="24"
+           alt="youtube"
+           className="drop-shadow-md cursor-pointer"
+          />
+          <Image
+           src="react.svg"
+           width="24"
+           height="24"
+           alt="react"
+           className="drop-shadow-md cursor-pointer"
+          />
+        </div>        
       </NavCollapsible>
+
       <nav className="nav text-sm">
         <div className="body-margin flex flex-row justify-between items-center">
           <div className="flex min-w-0 gap-4 items-center">
