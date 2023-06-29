@@ -33,7 +33,7 @@ body {
 .nav {
   color: hsl(228, 20%, 85%);
   background-color: hsl(228, 20%, 10%);
-  @apply shadow-lg py-4 fixed w-full z-10;
+  @apply shadow-lg py-4 fixed w-full z-20;
 }
 
 .nav-link {
@@ -204,4 +204,35 @@ body {
 .about-jumbo {
   background-image: url('/about-jumbo.jpg');
   @apply bg-cover bg-center bg-no-repeat shadow-lg;
+}
+
+.section-2-clip {
+  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);
+}
+
+.core-values-img {
+  @apply flex items-center justify-center font-black drop-shadow-md uppercase text-sm w-20 h-20 sm:w-32 sm:h-32 overflow-hidden shadow-lg rounded-full bg-cover bg-center bg-no-repeat;
+}
+
+.core-values-img-1 {
+  background-image: url('/professionalism.jpg');
+}
+
+.core-values-img-2 {
+  background-image: url('/professionalism.jpg');
+}
+
+.core-values-img-3 {
+  background-image: url('/expectations.jpg');
+}
+
+.section-services {
+  background-image: url('/workstation.jpg');
+  @apply bg-cover bg-center bg-no-repeat py-16;
+}
+
+.join-team {
+  min-width: 0px;
+  flex: 1;
+  @apply mt-8 sm:mt-0;
 }
