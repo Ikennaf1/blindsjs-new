@@ -138,8 +138,8 @@ const AboutUs = () => {
             <span>01</span>
           </div>
 
-          <Image
-           src="/vertical_line.png"
+          <img
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -150,8 +150,8 @@ const AboutUs = () => {
           We believe that every organization deserves a remarkable website<br />
           that resonates with their audience and represents their unique identity. Whether it's a sleek corporate site,<br />a captivating e-commerce platform, or an engaging web app, we are here to make your digital aspirations a reality.</p>
 
-          <Image
-           src="/vertical_line.png"
+          <img
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -165,8 +165,8 @@ const AboutUs = () => {
         <div className="body-margin text-center flex flex-col items-center gap-4 overflow-hidden py-16 text-gray-200">
           <p className="z-10 text-xl md:text-2xl lg:text-3xl font-bold text-white">Core Values</p>
 
-          <Image
-           src="/vertical_line.png"
+          <img
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -190,8 +190,8 @@ const AboutUs = () => {
             <span>02</span>
           </div>
 
-          <Image
-           src="/vertical_line.png"
+          <img
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -213,8 +213,8 @@ const AboutUs = () => {
             deliver outstanding results that leave a lasting impact on your audience.</p>
           </div>
 
-          <Image
-           src="/vertical_line.png"
+          <img
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -229,7 +229,7 @@ const AboutUs = () => {
           <p className="z-10 text-xl md:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg"><span className="text-gray-300">Expertise and Services: </span>Crafting Exceptional Web Experiences</p>
 
           {/* <Image
-           src="/vertical_line.png"
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -248,7 +248,7 @@ const AboutUs = () => {
           </div>
 
           {/* <Image
-           src="/vertical_line.png"
+           src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/vertical_line.png"
            width="4"
            height="94"
            alt="vertical line"
@@ -269,7 +269,7 @@ const AboutUs = () => {
               </div>
               <div className="section-two-items text-gray-300">
                 <img
-                 src="/team.jpg"
+                 src="https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/team.jpg"
                  className="object-cover"
                 />
               </div>
