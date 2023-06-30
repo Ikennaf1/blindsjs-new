@@ -6,10 +6,10 @@ import logoDark from '/public/logo-no-bg-dark.svg';
 import toggleIcon from '/public/bars-3-bottom-right.svg';
 
 export const metadata = {
-  title: 'Blinds | About',
+  title: 'Blinds | About us',
   description: 'The best dark mode package for all websites',
   openGraph: {
-    title: 'Blinds | About',
+    title: 'Blinds | About us',
     description: 'The best dark mode package for all websites',
     image: 'https://raw.githubusercontent.com/Ikennaf1/staticrepo/master/imgs/og-blinds.jpg'
   }
@@ -29,27 +29,29 @@ const AboutUs = () => {
           </ul>
         </div>
         <div className="flex flex-row flex-wrap gap-8">
-          <Image
-           src="whatsapp.svg"
-           width="24"
-           height="24"
-           alt="Whatsapp"
-           className="drop-shadow-md cursor-pointer"
-          />
-          <Image
+          <Link href="https://wa.me/message/HFKHEXWNRCEFE1">
+            <Image
+            src="whatsapp.svg"
+            width="24"
+            height="24"
+            alt="Whatsapp"
+            className="drop-shadow-md cursor-pointer"
+            />
+          </Link>
+          {/* <Image
            src="twitter.svg"
            width="24"
            height="24"
            alt="Twitter"
            className="drop-shadow-md cursor-pointer"
-          />
-          <Image
+          /> */}
+          {/* <Image
            src="facebook.svg"
            width="24"
            height="24"
            alt="facebook"
            className="drop-shadow-md cursor-pointer"
-          />
+          /> */}
           {/* <Image
            src="wordpress.svg"
            width="24"
@@ -129,7 +131,7 @@ const AboutUs = () => {
 
       <section>
         <div className="body-margin text-center flex flex-col items-center gap-4 overflow-hidden">
-          <p className="z-10 text-xl md:text-2xl lg:text-3xl font-bold text-black">We are more than just a website<br />development firm</p>
+          <p className="z-10 text-xl md:text-2xl lg:text-3xl font-bold text-black more-than">We are more than just a website<br />development firm</p>
           <p className="z-10 font-light">We are your partner in establishing an online presence.<br />We are a humble team of freelancers<br />dedicated to crafting exceptional web experiences for you our client, and your customers.</p>
 
           <div className="num-backs absolute opacity-20 bg-red-300 flex flex-row mx-auto justify-center self-start items-center text-9xl w-64 h-64 rounded-full font-black text-[white]">
@@ -155,7 +157,7 @@ const AboutUs = () => {
            alt="vertical line"
           />
 
-          <a className="z-10 w-40 mx-auto px-5 py-4 bg-none border-2 border-[#fb4b7b] hover:bg-[#fb4b7b] text-black hover:text-white hover:shadow-lg rounded-3xl ease-linear duration-100 uppercase font-bold text-xs" href="/">Get started</a>
+          <a className="more-than-btn-link z-10 w-40 mx-auto px-5 py-4 bg-none border-2 border-[#fb4b7b] hover:bg-[#fb4b7b] text-black hover:text-white hover:shadow-lg rounded-3xl ease-linear duration-100 uppercase font-bold text-xs" href="/">Get started</a>
         </div>
       </section>
 

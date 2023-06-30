@@ -4,7 +4,7 @@ import { blindsInit, blindsToggle, setBlindsStyles } from 'blinds';
 import { useEffect } from 'react';
 import DarkModeStyle from './DarkModeStyle.json';
 import './globals.css';
-// import Head from 'next/head';
+import Head from 'next/head';
 import Footer from './Footer';
 
 export const metadata = {
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="keywords" content="dark mode night mode" />
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         
         <link rel="manifest" href="/site.webmanifest.json" />
-      </head>
+      </Head>
       <body className="">
         {children}
         <Footer />
